@@ -6,8 +6,8 @@ import json
 
 # Image Constants
 outputSize = 6000  # Resolution in pixesl.  It should be greater than the print size x resolution to make sure the cropped images are big enough.
-numSubdivisions = 30  # Number of divisions between each color change (higher is smoother).  Minimum is 1, there is no max, but it starts to get weird at high levels
-gaussianBlurRadius = 50  # Radius for Gaussian blur.  Set to 0 to disable.  Works best with higher subdivisions
+numSubdivisions = 2  # Number of divisions between each color change (higher is smoother).  Minimum is 1, there is no max, but it starts to get weird at high levels
+gaussianBlurRadius = 0  # Radius for Gaussian blur.  Set to 0 to disable.  Works best with higher subdivisions
 
 # Print Constants
 printSize = 8  # Export print size in inches
@@ -80,7 +80,7 @@ color_palettes = {
     },
     'vintage_rainbow_2': {
         'description': 'A vintage set of rainbow colors',
-        'export': True,
+        'export': False,
         'colors': [
             {'name': 'Yellow', 'color': '#D8D7B9'},
             {'name': 'Orange', 'color': '#CDAB81'},
@@ -90,7 +90,7 @@ color_palettes = {
     },
     'vintage_rainbow_3': {
         'description': 'A vintage set of rainbow colors',
-        'export': True,
+        'export': False,
         'colors': [
             {'name': 'Light Yellow', 'color': '#FBD773'},
             {'name': 'Peach', 'color': '#F8A479'},
@@ -118,6 +118,17 @@ color_palettes = {
             {'name': 'Pink', 'color': '#E2BAE8'},
             {'name': 'Purple', 'color': '#A096D1'},
             {'name': 'Green', 'color': '#9BD4B3'}
+        
+        ]
+    },
+    'fixed_degree_sample': {
+        'description': 'Sample with custom degrees',
+        'export': True,
+        'colors': [
+            {'name': 'Yellow', 'color': '#E0EBC5', 'degree': 0},
+            {'name': 'Pink', 'color': '#E2BAE8', 'degree': 180},
+            {'name': 'Purple', 'color': '#A096D1', 'degree': 270},
+            {'name': 'Green', 'color': '#9BD4B3', 'degree': 315}
         
         ]
     }
